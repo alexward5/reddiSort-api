@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const simpleOAuth2Reddit = require('simple-oauth2-reddit');
