@@ -8,6 +8,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var port = process.env.PORT || 8080;
+
 // CORS setup
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -130,6 +132,6 @@ app.get('/auth/reddit/demo', (req, res) => {
   .catch(err => console.log(err));
 });
 
-app.listen(3000, () => {
-  console.log('reddit-favorites-api listening on port 3000');
+app.listen(port, () => {
+  console.log(`reddit-favorites-api listening on port ${port}`);
 })
