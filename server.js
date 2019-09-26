@@ -132,6 +132,10 @@ app.get('/auth/reddit/demo', (req, res) => {
   .catch(err => console.log(err));
 });
 
+app.get('*', (req, res) => {
+  res.status(404).send({ error: 'endpoint not found' });
+});
+
 app.listen(port, () => {
   console.log(`reddit-favorites-api listening on port ${port}`);
 })
