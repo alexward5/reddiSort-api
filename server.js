@@ -32,7 +32,7 @@ const reddit = simpleOAuth2Reddit.create({
   callbackURL: process.env.CALLBACK_URL,
   state: process.env.STATE,
   duration: 'permanent',
-  scope: '*'
+  scope: ['history']
 });
 
 const getData = async (access_token) => {
