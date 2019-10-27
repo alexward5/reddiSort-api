@@ -101,7 +101,7 @@ app.get('/auth/reddit', reddit.authorize);
 // Exchange the token for the access token and redirect to app.
 app.get('/auth/reddit/callback', reddit.accessToken, (req, res) => {
   redditToken = req.token;
-  res.redirect('https://reddisort.herokuapp.com/');
+  res.redirect('https://reddisort.com/');
 });
 
 // get data for client that does not already have token
